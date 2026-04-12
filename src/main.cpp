@@ -64,6 +64,6 @@ int main(int argc, char* argv[])
     =============================================
     */
     Mesh myMesh(1.0, 1.0, 10, 10);
-    std::cout << (5)%3 << " " << (5)/3 << std::endl;
+    myMesh.displayMesh();
    return 0;
 }

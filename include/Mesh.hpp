@@ -9,7 +9,6 @@ typedef struct
 
 } StencilIndicies;
 
-template <typename DataType>
 class Mesh
 {
     public:
@@ -33,12 +32,13 @@ class Mesh
         int                     DivsX;
         int                     DivsY;
 
-        std::vector<DataType>   GridData;
+        std::vector<double>     GridData;
         std::vector<bool>       BoundaryTypes;
+        std::vector<double>     BoundaryVals;
 
 };
 
 
 // Helper Functions
-
-StencilIndicies getIndiciesFromIndex(int myIndex);
+int             getIndexFromIndicies(StencilIndicies myStencil, const Mesh& thisMesh);
+StencilIndicies getIndiciesFromIndex(int myIndex, Mesh& thisMesh);
