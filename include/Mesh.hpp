@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Utilities.hpp"
+// #include "Element.hpp"
+// #include "Matrix.hpp"
 
 typedef struct 
 {
@@ -19,7 +21,13 @@ class Mesh
         int     getDivisionsX() const   {return DivsX;}
         int     getDivisionsY() const   {return DivsY;}
 
-        void    displayMesh()   const;
+        double  getSpacingX()   const   {return SpaceX;}
+        double  getSpacingY()   const   {return SpaceY;}
+
+        void                    displayMesh()   const;
+        // std::vector<Element>    generateElements();
+        // Matrix                  generateGlobalMatrix();
+
 
 
     private:

@@ -23,9 +23,13 @@ class Element
 {
     public:
         // Constructors
-
+        Element(Node topLeft, Mesh homeMesh);
 
         // Non-Modifying Member Functions
+        Matrix formElementMatrix() const {}
+        int    getElementNumber()  const {return ElementNumber;}
+        void   printElement()      const;
+        Node   getNode(int index)  const {return ElementNodes[index];}
 
 
 
@@ -33,7 +37,7 @@ class Element
         std::vector<Node>   ElementNodes;
         double              ElementArea;
         int                 ElementNumber;
-         
+
 
 
 };

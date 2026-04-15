@@ -38,6 +38,28 @@ void Mesh::displayMesh()   const
     }
 };
 
+/*
+std::vector<Element> Mesh::generateElements()
+{
+    int numElements = DivsX * DivsY;
+    std::vector<Element> elementList(numElements);
+
+    for (int i=0; i<elementList.size()-1; i++)
+    {
+        Node myTopLeft;
+        StencilIndicies myStencil = getIndiciesFromIndex(i, *this);
+
+        myTopLeft.myPos.Indicies = myStencil;
+
+        myTopLeft.myPos.x = (myStencil.i % DivsX) * SpaceX;
+        myTopLeft.myPos.y = (myStencil.i / DivsX) * SpaceY;
+
+
+        Element thisElement(myTopLeft, *this);
+        elementList.push_back(thisElement);
+    }
+}
+*/
 
 
 

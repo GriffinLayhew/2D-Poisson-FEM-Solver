@@ -14,6 +14,8 @@
 
 #include "Utilities.hpp"
 #include "Mesh.hpp"
+#include "Matrix.hpp"
+#include "Element.hpp"
 
 // Standard Function to Calculate Amount of Memory Being Used
 long GetProgramMemoryUsage() 
@@ -65,5 +67,15 @@ int main(int argc, char* argv[])
     */
     Mesh myMesh(1.0, 1.0, 10, 10);
     myMesh.displayMesh();
+    
+    Node myNode;
+    myNode.myPos.x = 0;
+    myNode.myPos.y = .125;
+
+    myNode.myPos.Indicies.i = 2;
+    myNode.myPos.Indicies.j = 5;
+
+    Element myElement(myNode, myMesh);
+    myElement.printElement();
    return 0;
 }
